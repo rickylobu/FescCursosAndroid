@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".ui.EditarCurso">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Editar Curso"
+            android:textColor="@drawable/boton"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextNombreEditarCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:hint="Nombre del Curso"
+            android:inputType="text"
+            android:scrollbars="horizontal"
+            android:textColor="@drawable/boton"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextImagenEditarCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:hint="URL de la Imagen"
+            android:inputType="text"
+            android:scrollbars="horizontal"
+            android:textColor="@drawable/boton"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNombreEditarCurso" />
+
+        <ImageView
+            android:id="@+id/imagenEditar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextImagenEditarCurso" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextCategoriaEditarCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:hint="Categoría del Curso"
+            android:inputType="text"
+            android:scrollbars="horizontal"
+            android:textColor="@drawable/boton"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenEditar" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDescripcionEditarCurso"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:hint="Descripción del Curso"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:textAlignment="center"
+            android:textColor="@drawable/boton"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCategoriaEditarCurso" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEditarCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/boton"
+            android:paddingHorizontal="15dp"
+            android:text="Actualizar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/regresarEditarCurso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDescripcionEditarCurso" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPracticasActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/boton"
+            android:paddingHorizontal="15dp"
+            android:text="Prácticas"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/regresarEditarCurso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDescripcionEditarCurso"
+            android:onClick="practicasActivity"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/regresarEditarCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/boton"
+            android:paddingHorizontal="15dp"
+            android:text="Regresar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="regresarEditarCurso"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
